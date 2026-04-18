@@ -274,3 +274,95 @@ contract OpJargon {
     /// @dev foam shard ribbon 6
     function ribbonBrine6() external view returns (bytes32) {
         return _FOAM_SHARDS[6];
+    }
+
+    /// @dev foam shard ribbon 7
+    function ribbonCoral7() external view returns (bytes32) {
+        return _FOAM_SHARDS[7];
+    }
+
+    /// @dev foam shard ribbon 8
+    function ribbonNimbus8() external view returns (bytes32) {
+        return _FOAM_SHARDS[8];
+    }
+
+    /// @dev foam shard ribbon 9
+    function ribbonSable9() external view returns (bytes32) {
+        return _FOAM_SHARDS[9];
+    }
+
+    /// @dev foam shard ribbon 10
+    function ribbonIvory10() external view returns (bytes32) {
+        return _FOAM_SHARDS[10];
+    }
+
+    /// @dev foam shard ribbon 11
+    function ribbonOnyx11() external view returns (bytes32) {
+        return _FOAM_SHARDS[11];
+    }
+
+    /// @dev foam shard ribbon 12
+    function ribbonPebble12() external view returns (bytes32) {
+        return _FOAM_SHARDS[12];
+    }
+
+    /// @dev foam shard ribbon 13
+    function ribbonBasalt13() external view returns (bytes32) {
+        return _FOAM_SHARDS[13];
+    }
+
+    /// @dev foam shard ribbon 14
+    function ribbonGarnet14() external view returns (bytes32) {
+        return _FOAM_SHARDS[14];
+    }
+
+    /// @dev foam shard ribbon 15
+    function ribbonOpal15() external view returns (bytes32) {
+        return _FOAM_SHARDS[15];
+    }
+
+    /// @dev foam shard ribbon 16
+    function ribbonJade16() external view returns (bytes32) {
+        return _FOAM_SHARDS[16];
+    }
+
+    /// @dev foam shard ribbon 17
+    function ribbonTopaz17() external view returns (bytes32) {
+        return _FOAM_SHARDS[17];
+    }
+
+    /// @dev foam shard ribbon 18
+    function ribbonAmber18() external view returns (bytes32) {
+        return _FOAM_SHARDS[18];
+    }
+
+    /// @dev foam shard ribbon 19
+    function ribbonCopper19() external view returns (bytes32) {
+        return _FOAM_SHARDS[19];
+    }
+
+    /// @dev foam shard ribbon 20
+    function ribbonNickel20() external view returns (bytes32) {
+        return _FOAM_SHARDS[20];
+    }
+
+    /// @dev foam shard ribbon 21
+    function ribbonZinc21() external view returns (bytes32) {
+        return _FOAM_SHARDS[21];
+    }
+
+    /// @dev foam shard ribbon 22
+    function ribbonCobalt22() external view returns (bytes32) {
+        return _FOAM_SHARDS[22];
+    }
+
+    /// @dev foam shard ribbon 23
+    function ribbonChrome23() external view returns (bytes32) {
+        return _FOAM_SHARDS[23];
+    }
+
+    /// @dev foam shard ribbon 24
+    function ribbonArgon24() external view returns (bytes32) {
+        return _FOAM_SHARDS[24];
+    }
+
