@@ -734,3 +734,95 @@ contract OpJargon {
     }
 
     function laneDigest3(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(4)), root, keccak256(bytes("OpJargon.laneDrift"))));
+    }
+
+    function laneDigest4(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(5)), root, keccak256(bytes("OpJargon.laneEcho"))));
+    }
+
+    function laneDigest5(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(6)), root, keccak256(bytes("OpJargon.laneFlux"))));
+    }
+
+    function laneDigest6(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(7)), root, keccak256(bytes("OpJargon.laneGlow"))));
+    }
+
+    function laneDigest7(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(8)), root, keccak256(bytes("OpJargon.laneHaze"))));
+    }
+
+    function laneDigest8(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(9)), root, keccak256(bytes("OpJargon.laneInk"))));
+    }
+
+    function laneDigest9(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(10)), root, keccak256(bytes("OpJargon.laneJade"))));
+    }
+
+    function laneDigest10(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(11)), root, keccak256(bytes("OpJargon.laneKelp"))));
+    }
+
+    function laneDigest11(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(12)), root, keccak256(bytes("OpJargon.laneLoom"))));
+    }
+
+    function laneDigest12(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(13)), root, keccak256(bytes("OpJargon.laneMist"))));
+    }
+
+    function laneDigest13(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(14)), root, keccak256(bytes("OpJargon.laneNova"))));
+    }
+
+    function laneDigest14(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(15)), root, keccak256(bytes("OpJargon.laneOrbit"))));
+    }
+
+    function laneDigest15(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(16)), root, keccak256(bytes("OpJargon.lanePulse"))));
+    }
+
+    function laneDigest16(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(17)), root, keccak256(bytes("OpJargon.laneQuill"))));
+    }
+
+    function laneDigest17(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(18)), root, keccak256(bytes("OpJargon.laneReef"))));
+    }
+
+    function laneDigest18(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(19)), root, keccak256(bytes("OpJargon.laneSilt"))));
+    }
+
+    function laneDigest19(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(20)), root, keccak256(bytes("OpJargon.laneTide"))));
+    }
+
+    function laneDigest20(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(21)), root, keccak256(bytes("OpJargon.laneUltraviolet"))));
+    }
+
+    function laneDigest21(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(22)), root, keccak256(bytes("OpJargon.laneVapor"))));
+    }
+
+    function laneDigest22(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(23)), root, keccak256(bytes("OpJargon.laneWave"))));
+    }
+
+    function laneDigest23(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(24)), root, keccak256(bytes("OpJargon.laneXylem"))));
+    }
+
+    function laneDigest24(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(25)), root, keccak256(bytes("OpJargon.laneYarrow"))));
+    }
+
+    function laneDigest25(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(26)), root, keccak256(bytes("OpJargon.laneZinc"))));
+    }
+
+    function laneDigest26(bytes32 root) external pure returns (bytes32) {
