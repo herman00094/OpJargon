@@ -90,3 +90,95 @@ contract OpJargon {
     event ScribeQuillDipped(address scribe, bytes32 root);
     event ShardRibbonPolished(uint8 idx, bytes32 shard);
     event EchoBloomVerified(bytes32 root, bytes32 anchor);
+    event MicaDriftAligned(uint256 coil, uint256 brine);
+
+    modifier nonReentrant() {
+        if (_entered) revert VerblessNavy__ReentryMoth();
+        _entered = true;
+        _;
+        _entered = false;
+    }
+
+    modifier onlyVole() {
+        if (msg.sender != VOLE_CUSTODIAN) revert VerblessNavy__AntlerTooWide();
+        _;
+    }
+
+    modifier onlyLedger() {
+        if (msg.sender != AURORA_LEDGER) revert VerblessNavy__LedgerMismatch();
+        _;
+    }
+
+    modifier onlyFog() {
+        if (msg.sender != SILICA_FOG) revert VerblessNavy__FogSealed();
+        _;
+    }
+
+    modifier whenUnpaused() {
+        if (!fogLifted) revert VerblessNavy__FogSealed();
+        _;
+    }
+
+    constructor(address voleCustodian, address auroraLedger, address silicaFog) {
+        if (voleCustodian == address(0) || auroraLedger == address(0) || silicaFog == address(0)) {
+            revert VerblessNavy__VoidLane();
+        }
+        VOLE_CUSTODIAN = voleCustodian;
+        AURORA_LEDGER = auroraLedger;
+        SILICA_FOG = silicaFog;
+        COIL_WINDOW = 93757;
+        BRINE_CAP = 4829163;
+        GLOW_CEILING = 18884001;
+        ANCHOR_SPOOL = keccak256(abi.encodePacked(block.chainid, address(this), keccak256("OpJargon.anchorSpool")));
+        FRAME_BLOOM = keccak256(abi.encodePacked(keccak256("OpJargon.frameBloom"), voleCustodian));
+        fogLifted = true;
+        for (uint256 i; i < 96; ++i) {
+            _FOAM_SHARDS[i] = keccak256(abi.encodePacked(bytes32(uint256(i + 1)), FRAME_BLOOM, ANCHOR_SPOOL));
+        }
+        emit FogHornLifted(silicaFog, block.timestamp);
+    }
+
+    function liftFog() external onlyFog {
+        fogLifted = true;
+        emit FogHornLifted(msg.sender, block.timestamp);
+    }
+
+    function dropFog() external onlyFog {
+        fogLifted = false;
+        emit FogHornDropped(msg.sender, block.timestamp);
+    }
+
+    function polishShard(uint8 idx, bytes32 shard) external onlyVole {
+        if (idx >= 96) revert VerblessNavy__ShardMissing();
+        _FOAM_SHARDS[idx] = shard;
+        emit ShardRibbonPolished(idx, shard);
+    }
+
+    function readFoam(uint8 idx) external view returns (bytes32) {
+        if (idx >= 96) revert VerblessNavy__ShardMissing();
+        return _FOAM_SHARDS[idx];
+    }
+
+    function mintCapsule(bytes32 root, uint32 band, uint16 q, uint8 tier) external nonReentrant whenUnpaused onlyVole {
+        if (atlas[root].mintedTick != 0) revert VerblessNavy__EchoCollision();
+        if (band == 0) revert VerblessNavy__BandUnknown();
+        if (q > uint16(COIL_WINDOW)) revert VerblessNavy__QOutOfCoil();
+        tier = BitQuilt.clampTier(tier);
+        uint256 packed = BitQuilt.weave(uint64(block.timestamp), band, q, tier);
+        atlas[root] = UtteranceCapsule({
+            mintedTick: uint64(block.timestamp),
+            localeBand: band,
+            complexityQ: q,
+            clarityTier: tier,
+            lastScribe: msg.sender,
+            packedEcho: packed
+        });
+        globalNonce += 1;
+        emit InkLizardFlash(root, packed, msg.sender);
+        emit CobaltVesperMinted(root, band, tier);
+    }
+
+    function reviseCapsule(bytes32 root, uint32 band, uint16 q, uint8 tier) external nonReentrant whenUnpaused onlyVole {
+        UtteranceCapsule storage c = atlas[root];
+        if (c.mintedTick == 0) revert VerblessNavy__CapsuleFrozen();
+        if (band == 0) revert VerblessNavy__BandUnknown();
