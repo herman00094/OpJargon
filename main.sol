@@ -642,3 +642,95 @@ contract OpJargon {
     }
 
     /// @dev foam shard ribbon 80
+    function ribbonQuartz80() external view returns (bytes32) {
+        return _FOAM_SHARDS[80];
+    }
+
+    /// @dev foam shard ribbon 81
+    function ribbonVelvet81() external view returns (bytes32) {
+        return _FOAM_SHARDS[81];
+    }
+
+    /// @dev foam shard ribbon 82
+    function ribbonMica82() external view returns (bytes32) {
+        return _FOAM_SHARDS[82];
+    }
+
+    /// @dev foam shard ribbon 83
+    function ribbonTidal83() external view returns (bytes32) {
+        return _FOAM_SHARDS[83];
+    }
+
+    /// @dev foam shard ribbon 84
+    function ribbonLunar84() external view returns (bytes32) {
+        return _FOAM_SHARDS[84];
+    }
+
+    /// @dev foam shard ribbon 85
+    function ribbonSolar85() external view returns (bytes32) {
+        return _FOAM_SHARDS[85];
+    }
+
+    /// @dev foam shard ribbon 86
+    function ribbonBrine86() external view returns (bytes32) {
+        return _FOAM_SHARDS[86];
+    }
+
+    /// @dev foam shard ribbon 87
+    function ribbonCoral87() external view returns (bytes32) {
+        return _FOAM_SHARDS[87];
+    }
+
+    /// @dev foam shard ribbon 88
+    function ribbonNimbus88() external view returns (bytes32) {
+        return _FOAM_SHARDS[88];
+    }
+
+    /// @dev foam shard ribbon 89
+    function ribbonSable89() external view returns (bytes32) {
+        return _FOAM_SHARDS[89];
+    }
+
+    /// @dev foam shard ribbon 90
+    function ribbonIvory90() external view returns (bytes32) {
+        return _FOAM_SHARDS[90];
+    }
+
+    /// @dev foam shard ribbon 91
+    function ribbonOnyx91() external view returns (bytes32) {
+        return _FOAM_SHARDS[91];
+    }
+
+    /// @dev foam shard ribbon 92
+    function ribbonPebble92() external view returns (bytes32) {
+        return _FOAM_SHARDS[92];
+    }
+
+    /// @dev foam shard ribbon 93
+    function ribbonBasalt93() external view returns (bytes32) {
+        return _FOAM_SHARDS[93];
+    }
+
+    /// @dev foam shard ribbon 94
+    function ribbonGarnet94() external view returns (bytes32) {
+        return _FOAM_SHARDS[94];
+    }
+
+    /// @dev foam shard ribbon 95
+    function ribbonOpal95() external view returns (bytes32) {
+        return _FOAM_SHARDS[95];
+    }
+
+    function laneDigest0(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(1)), root, keccak256(bytes("OpJargon.laneAurora"))));
+    }
+
+    function laneDigest1(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(2)), root, keccak256(bytes("OpJargon.laneBrine"))));
+    }
+
+    function laneDigest2(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(3)), root, keccak256(bytes("OpJargon.laneCobalt"))));
+    }
+
+    function laneDigest3(bytes32 root) external pure returns (bytes32) {
