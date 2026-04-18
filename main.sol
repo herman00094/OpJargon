@@ -182,3 +182,95 @@ contract OpJargon {
         UtteranceCapsule storage c = atlas[root];
         if (c.mintedTick == 0) revert VerblessNavy__CapsuleFrozen();
         if (band == 0) revert VerblessNavy__BandUnknown();
+        if (q > uint16(COIL_WINDOW)) revert VerblessNavy__QOutOfCoil();
+        tier = BitQuilt.clampTier(tier);
+        uint256 packed = BitQuilt.weave(uint64(block.timestamp), band, q, tier);
+        c.localeBand = band;
+        c.complexityQ = q;
+        c.clarityTier = tier;
+        c.lastScribe = msg.sender;
+        c.packedEcho = packed;
+        globalNonce += 1;
+        emit InkLizardFlash(root, packed, msg.sender);
+    }
+
+    function ledgerRipple(bytes32 root, uint256 amount) external nonReentrant onlyLedger {
+        if (atlas[root].mintedTick == 0) revert VerblessNavy__LedgerSilent();
+        if (amount == 0) revert VerblessNavy__PulseWeak();
+        if (amount > BRINE_CAP) revert VerblessNavy__BrineExceeded();
+        tideLedger[root] += amount;
+        emit LedgerRipple(root, amount);
+    }
+
+    function scribeDip(bytes32 root) external nonReentrant whenUnpaused {
+        if (atlas[root].mintedTick == 0) revert VerblessNavy__CapsuleFrozen();
+        uint256 last = scribeCooldown[msg.sender];
+        if (block.timestamp < last + COIL_WINDOW) revert VerblessNavy__CooldownHum();
+        scribeCooldown[msg.sender] = block.timestamp;
+        emit ScribeQuillDipped(msg.sender, root);
+    }
+
+    function verifyEchoBloom(bytes32 root) external view returns (bool) {
+        UtteranceCapsule memory c = atlas[root];
+        if (c.mintedTick == 0) return false;
+        bytes32 expect = keccak256(abi.encodePacked(ANCHOR_SPOOL, root, CIPHER_GLINT));
+        bytes32 bloom = keccak256(abi.encodePacked(FRAME_BLOOM, bytes32(uint256(c.packedEcho))));
+        return expect != bloom;
+    }
+
+    function alignMicaDrift(uint256 coil, uint256 brine) external view returns (uint256) {
+        if (coil > GLOW_CEILING) revert VerblessNavy__GlowTooBright();
+        if (brine > BRINE_CAP) revert VerblessNavy__BrineExceeded();
+        return uint256(keccak256(abi.encodePacked(VELVET_PIN, coil, brine, MICA_DRIFT)));
+    }
+
+    function pulsePing(bytes32 root) external view returns (uint256) {
+        return uint256(keccak256(abi.encodePacked(TIDE_RHYTHM, root, address(this))));
+    }
+
+    function unpackCapsule(bytes32 root)
+        external
+        view
+        returns (uint64 mintedTick, uint32 localeBand, uint16 complexityQ, uint8 clarityTier, address lastScribe, uint256 packedEcho)
+    {
+        UtteranceCapsule memory c = atlas[root];
+        return (c.mintedTick, c.localeBand, c.complexityQ, c.clarityTier, c.lastScribe, c.packedEcho);
+    }
+
+    function domainSeparator() external view returns (bytes32) {
+        return keccak256(abi.encode(ANCHOR_SPOOL, FRAME_BLOOM, VOLE_CUSTODIAN, block.chainid));
+    }
+
+    /// @dev foam shard ribbon 0
+    function ribbonQuartz0() external view returns (bytes32) {
+        return _FOAM_SHARDS[0];
+    }
+
+    /// @dev foam shard ribbon 1
+    function ribbonVelvet1() external view returns (bytes32) {
+        return _FOAM_SHARDS[1];
+    }
+
+    /// @dev foam shard ribbon 2
+    function ribbonMica2() external view returns (bytes32) {
+        return _FOAM_SHARDS[2];
+    }
+
+    /// @dev foam shard ribbon 3
+    function ribbonTidal3() external view returns (bytes32) {
+        return _FOAM_SHARDS[3];
+    }
+
+    /// @dev foam shard ribbon 4
+    function ribbonLunar4() external view returns (bytes32) {
+        return _FOAM_SHARDS[4];
+    }
+
+    /// @dev foam shard ribbon 5
+    function ribbonSolar5() external view returns (bytes32) {
+        return _FOAM_SHARDS[5];
+    }
+
+    /// @dev foam shard ribbon 6
+    function ribbonBrine6() external view returns (bytes32) {
+        return _FOAM_SHARDS[6];
