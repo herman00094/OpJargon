@@ -366,3 +366,95 @@ contract OpJargon {
         return _FOAM_SHARDS[24];
     }
 
+    /// @dev foam shard ribbon 25
+    function ribbonXenon25() external view returns (bytes32) {
+        return _FOAM_SHARDS[25];
+    }
+
+    /// @dev foam shard ribbon 26
+    function ribbonRadon26() external view returns (bytes32) {
+        return _FOAM_SHARDS[26];
+    }
+
+    /// @dev foam shard ribbon 27
+    function ribbonKrypton27() external view returns (bytes32) {
+        return _FOAM_SHARDS[27];
+    }
+
+    /// @dev foam shard ribbon 28
+    function ribbonNeon28() external view returns (bytes32) {
+        return _FOAM_SHARDS[28];
+    }
+
+    /// @dev foam shard ribbon 29
+    function ribbonHelium29() external view returns (bytes32) {
+        return _FOAM_SHARDS[29];
+    }
+
+    /// @dev foam shard ribbon 30
+    function ribbonBoron30() external view returns (bytes32) {
+        return _FOAM_SHARDS[30];
+    }
+
+    /// @dev foam shard ribbon 31
+    function ribbonSilica31() external view returns (bytes32) {
+        return _FOAM_SHARDS[31];
+    }
+
+    /// @dev foam shard ribbon 32
+    function ribbonAlumina32() external view returns (bytes32) {
+        return _FOAM_SHARDS[32];
+    }
+
+    /// @dev foam shard ribbon 33
+    function ribbonZircon33() external view returns (bytes32) {
+        return _FOAM_SHARDS[33];
+    }
+
+    /// @dev foam shard ribbon 34
+    function ribbonSpinel34() external view returns (bytes32) {
+        return _FOAM_SHARDS[34];
+    }
+
+    /// @dev foam shard ribbon 35
+    function ribbonPeridot35() external view returns (bytes32) {
+        return _FOAM_SHARDS[35];
+    }
+
+    /// @dev foam shard ribbon 36
+    function ribbonAzurite36() external view returns (bytes32) {
+        return _FOAM_SHARDS[36];
+    }
+
+    /// @dev foam shard ribbon 37
+    function ribbonMalachite37() external view returns (bytes32) {
+        return _FOAM_SHARDS[37];
+    }
+
+    /// @dev foam shard ribbon 38
+    function ribbonTourmaline38() external view returns (bytes32) {
+        return _FOAM_SHARDS[38];
+    }
+
+    /// @dev foam shard ribbon 39
+    function ribbonBeryl39() external view returns (bytes32) {
+        return _FOAM_SHARDS[39];
+    }
+
+    /// @dev foam shard ribbon 40
+    function ribbonFeldspar40() external view returns (bytes32) {
+        return _FOAM_SHARDS[40];
+    }
+
+    /// @dev foam shard ribbon 41
+    function ribbonMuscovite41() external view returns (bytes32) {
+        return _FOAM_SHARDS[41];
+    }
+
+    /// @dev foam shard ribbon 42
+    function ribbonBiotite42() external view returns (bytes32) {
+        return _FOAM_SHARDS[42];
+    }
+
+    /// @dev foam shard ribbon 43
+    function ribbonOlivine43() external view returns (bytes32) {
