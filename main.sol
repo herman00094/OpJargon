@@ -918,3 +918,95 @@ contract OpJargon {
     }
 
     function laneDigest49(bytes32 root) external pure returns (bytes32) {
+        return keccak256(abi.encodePacked(bytes32(uint256(50)), root, keccak256(bytes("OpJargon.laneOmega"))));
+    }
+
+    function finalizeRibbonAudit(bytes32 root, uint8 start, uint8 span) external view returns (bytes32) {
+        if (uint256(start) + uint256(span) > 96) revert VerblessNavy__ShardMissing();
+        bytes32 acc = ANCHOR_SPOOL;
+        for (uint256 i = start; i < uint256(start) + uint256(span); ++i) {
+            acc = keccak256(abi.encodePacked(acc, _FOAM_SHARDS[i], root));
+        }
+        return acc;
+    }
+
+    receive() external payable {
+        revert VerblessNavy__PulseWeak();
+    }
+
+    fallback() external payable {
+        revert VerblessNavy__PulseWeak();
+    }
+}
+
+/* stripe-0: aurora tide ribbon 0 — ornamental telemetry */
+/* stripe-1: aurora tide ribbon 1 — ornamental telemetry */
+/* stripe-2: aurora tide ribbon 2 — ornamental telemetry */
+/* stripe-3: aurora tide ribbon 3 — ornamental telemetry */
+/* stripe-4: aurora tide ribbon 4 — ornamental telemetry */
+/* stripe-5: aurora tide ribbon 5 — ornamental telemetry */
+/* stripe-6: aurora tide ribbon 6 — ornamental telemetry */
+/* stripe-7: aurora tide ribbon 7 — ornamental telemetry */
+/* stripe-8: aurora tide ribbon 8 — ornamental telemetry */
+/* stripe-9: aurora tide ribbon 9 — ornamental telemetry */
+/* stripe-10: aurora tide ribbon 10 — ornamental telemetry */
+/* stripe-11: aurora tide ribbon 11 — ornamental telemetry */
+/* stripe-12: aurora tide ribbon 12 — ornamental telemetry */
+/* stripe-13: aurora tide ribbon 13 — ornamental telemetry */
+/* stripe-14: aurora tide ribbon 14 — ornamental telemetry */
+/* stripe-15: aurora tide ribbon 15 — ornamental telemetry */
+/* stripe-16: aurora tide ribbon 16 — ornamental telemetry */
+/* stripe-17: aurora tide ribbon 17 — ornamental telemetry */
+/* stripe-18: aurora tide ribbon 18 — ornamental telemetry */
+/* stripe-19: aurora tide ribbon 19 — ornamental telemetry */
+/* stripe-20: aurora tide ribbon 20 — ornamental telemetry */
+/* stripe-21: aurora tide ribbon 21 — ornamental telemetry */
+/* stripe-22: aurora tide ribbon 22 — ornamental telemetry */
+/* stripe-23: aurora tide ribbon 23 — ornamental telemetry */
+/* stripe-24: aurora tide ribbon 24 — ornamental telemetry */
+/* stripe-25: aurora tide ribbon 25 — ornamental telemetry */
+/* stripe-26: aurora tide ribbon 26 — ornamental telemetry */
+/* stripe-27: aurora tide ribbon 27 — ornamental telemetry */
+/* stripe-28: aurora tide ribbon 28 — ornamental telemetry */
+/* stripe-29: aurora tide ribbon 29 — ornamental telemetry */
+/* stripe-30: aurora tide ribbon 30 — ornamental telemetry */
+/* stripe-31: aurora tide ribbon 31 — ornamental telemetry */
+/* stripe-32: aurora tide ribbon 32 — ornamental telemetry */
+/* stripe-33: aurora tide ribbon 33 — ornamental telemetry */
+/* stripe-34: aurora tide ribbon 34 — ornamental telemetry */
+/* stripe-35: aurora tide ribbon 35 — ornamental telemetry */
+/* stripe-36: aurora tide ribbon 36 — ornamental telemetry */
+/* stripe-37: aurora tide ribbon 37 — ornamental telemetry */
+/* stripe-38: aurora tide ribbon 38 — ornamental telemetry */
+/* stripe-39: aurora tide ribbon 39 — ornamental telemetry */
+/* stripe-40: aurora tide ribbon 40 — ornamental telemetry */
+/* stripe-41: aurora tide ribbon 41 — ornamental telemetry */
+/* stripe-42: aurora tide ribbon 42 — ornamental telemetry */
+/* stripe-43: aurora tide ribbon 43 — ornamental telemetry */
+/* stripe-44: aurora tide ribbon 44 — ornamental telemetry */
+/* stripe-45: aurora tide ribbon 45 — ornamental telemetry */
+/* stripe-46: aurora tide ribbon 46 — ornamental telemetry */
+/* stripe-47: aurora tide ribbon 47 — ornamental telemetry */
+/* stripe-48: aurora tide ribbon 48 — ornamental telemetry */
+/* stripe-49: aurora tide ribbon 49 — ornamental telemetry */
+/* stripe-50: aurora tide ribbon 50 — ornamental telemetry */
+/* stripe-51: aurora tide ribbon 51 — ornamental telemetry */
+/* stripe-52: aurora tide ribbon 52 — ornamental telemetry */
+/* stripe-53: aurora tide ribbon 53 — ornamental telemetry */
+/* stripe-54: aurora tide ribbon 54 — ornamental telemetry */
+/* stripe-55: aurora tide ribbon 55 — ornamental telemetry */
+/* stripe-56: aurora tide ribbon 56 — ornamental telemetry */
+/* stripe-57: aurora tide ribbon 57 — ornamental telemetry */
+/* stripe-58: aurora tide ribbon 58 — ornamental telemetry */
+/* stripe-59: aurora tide ribbon 59 — ornamental telemetry */
+/* stripe-60: aurora tide ribbon 60 — ornamental telemetry */
+/* stripe-61: aurora tide ribbon 61 — ornamental telemetry */
+/* stripe-62: aurora tide ribbon 62 — ornamental telemetry */
+/* stripe-63: aurora tide ribbon 63 — ornamental telemetry */
+/* stripe-64: aurora tide ribbon 64 — ornamental telemetry */
+/* stripe-65: aurora tide ribbon 65 — ornamental telemetry */
+/* stripe-66: aurora tide ribbon 66 — ornamental telemetry */
+/* stripe-67: aurora tide ribbon 67 — ornamental telemetry */
+/* stripe-68: aurora tide ribbon 68 — ornamental telemetry */
+/* stripe-69: aurora tide ribbon 69 — ornamental telemetry */
+/* stripe-70: aurora tide ribbon 70 — ornamental telemetry */
